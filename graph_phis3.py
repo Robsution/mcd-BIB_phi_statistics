@@ -4,8 +4,8 @@ import numpy as np
 import os
 
 # --- Configuration ---
-input_filename = 'avg1.csv'
-output_canvas_name = 'avg_phidiff3.png'
+input_filename = 'avg2.csv'
+output_canvas_name = 'avg_phidiff3a.png'
 n_bins = 320
 n = n_bins
 minn = -0.02
@@ -21,7 +21,6 @@ if not os.path.exists(input_filename):
 try:
     # Assuming the CSV has a header row
     df = pd.read_csv(input_filename)
-    df = df.dropna()
     
 except pd.errors.EmptyDataError:
     print("ERROR: CSV file is empty or has no columns.")
